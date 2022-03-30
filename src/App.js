@@ -1,6 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 
+import { CustomListItem } from "./CustomListItem";
+
 /**
  * Returns a list of objects grouped by some property. For example:
  * groupBy([{name: 'Steve', team:'blue'}, {name: 'Jack', team: 'red'}, {name: 'Carol', team: 'blue'}], 'team')
@@ -90,20 +92,10 @@ function App() {
       return result;
     } else {
       return data.map((item) => (
-        <li key={Math.random()}>
-          {item.word}
-          <button className="btn btn-outline-success" onClick={() => {
-            setSavedWs((savedWs) => {
-              const tmpList = savedWs.concat();
-              tmpList.push(item.word)
-              return tmpList
-            })
-          }}>(save)</button>
-        </li>
+        <CustomListItem word = {item.word} setSavedWs = {setSavedWs} savedWs = {savedWs}/>
       ))
     }
   }
-
   const handleRhymesClick = () => {
     setDisplayDescription("...loading");
     setDisplayList();
