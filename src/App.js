@@ -152,7 +152,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>Repo address: https://github.com/strickland0702/SI579-hw6/tree/master<a href="https://github.com/strickland0702/SI579-hw6/tree/master" target="_blank">/</a></div>
+      <div>Repo address: <a href="https://github.com/strickland0702/SI579-hw6/tree/master" target="_blank">https://github.com/strickland0702/SI579-hw6/tree/master</a></div>
       <div>
         <h1 className="row">Rhyme Finder (579 Problem Set 6)</h1>
         <div className="row">
